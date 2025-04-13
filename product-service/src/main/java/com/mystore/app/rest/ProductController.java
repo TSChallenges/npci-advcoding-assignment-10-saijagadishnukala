@@ -4,6 +4,7 @@ import com.mystore.app.entity.Product;
 import com.mystore.app.service.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -14,6 +15,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/products")
+@RefreshScope
 public class ProductController {
 
     @Autowired
